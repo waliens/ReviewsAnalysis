@@ -1,7 +1,7 @@
 package rm.textprocessing.tools;
 
 /**
- * Gather the basic textprocessing tools
+ * For each textprocessing tools provided by the package exists a enumeration literal
  * @author Romain Mormont
  */
 public enum Tool 

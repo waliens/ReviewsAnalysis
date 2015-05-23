@@ -18,6 +18,11 @@ public class ToolFactory
 		case_ = Case.LOWERCASE;
 	}
 	
+	/**
+	 * Build a pipeline from an array of Tool enumeration literal
+	 * @param toolchain The array of Tool enumeration literal listing the tools that must added to the pipeline (in the same order)
+	 * @return The constructed pipeline
+	 */
 	public static Pipeline mk_pipeline(Tool[] toolchain)
 	{
 		try
@@ -35,9 +40,9 @@ public class ToolFactory
 	}
 	
 	/**
-	 * Return the text processing tool corresponding to the given tool
-	 * @param tool The tool
-	 * @return The corresponding text processing tool
+	 * Return the text processing tool object corresponding to the given tool enumeration literal
+	 * @param tool The tool enumeration literal
+	 * @return The corresponding text processing tool object
 	 */
 	public static TextProcessingTool tool(Tool tool)
 	{

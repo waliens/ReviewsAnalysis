@@ -3,6 +3,9 @@ package rm.textprocessing.tools;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * A tool for replacing every part of a String matching the given pattern by some other string
+ */
 public class PatternReplacer extends TextProcessingTool {
 
 	private Pattern pattern;

@@ -5,6 +5,7 @@ import rm.textprocessing.container.TextDocument;
 
 /**
  * A class implemented by all the text processing tool
+ * A text processing tool is an object that can perform a processing operation on a String object (through the method 'process')
  * @author Romain Mormont
  */
 public abstract class TextProcessingTool 

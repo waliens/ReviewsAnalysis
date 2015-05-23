@@ -9,6 +9,7 @@ import rm.util.TSVSerializable;
 
 /**
  * Abstract corpus type. A corpus is a set of document identified by a unique string.
+ * The documents stored in the corpus should be TSV serializable (i.e. implementing TSVRowSerializable)
  * @author Romain Mormont
  * @param <D> The document type.
  */

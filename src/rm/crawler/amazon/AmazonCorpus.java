@@ -6,6 +6,9 @@ import java.text.ParseException;
 import rm.textprocessing.container.corpus.AbstractCorpus;
 import rm.util.IOUtil;
 
+/**
+ * A class for representing a corpus of amazon reviews
+ */
 public class AmazonCorpus extends AbstractCorpus<AmazonReview> 
 {
 	private static final long serialVersionUID = -7247277302909764274L;

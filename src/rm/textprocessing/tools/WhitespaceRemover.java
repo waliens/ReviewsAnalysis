@@ -1,7 +1,7 @@
 package rm.textprocessing.tools;
 
 /**
- * A class for removing whitespace characters from a TextDocument 
+ * A tool for replacing every serie of space characters by a single whitespace
  * @author Romain Mormont
  */
 public class WhitespaceRemover extends PatternReplacer

@@ -31,7 +31,8 @@ public class LiubAnalyzer extends PolarityAnalyzer<Float>
 	}
 
 	@Override
-	protected float compute_polarity(Float polarity_info) {
+	protected float compute_polarity(Float polarity_info) 
+	{
 		return polarity_info;
 	}
 }

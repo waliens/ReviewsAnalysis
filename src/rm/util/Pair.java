@@ -1,5 +1,8 @@
 package rm.util;
 
+/**
+ * Class holding a pair of elements that can have different types
+ */
 public class Pair<L, R> 
 {
 	public L left;

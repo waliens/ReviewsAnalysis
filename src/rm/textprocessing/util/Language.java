@@ -1,7 +1,7 @@
 package rm.textprocessing.util;
 
 /**
- * Enumeration listing language 
+ * Enumeration listing languages
  * @author Romain Mormont
  */
 public enum Language 

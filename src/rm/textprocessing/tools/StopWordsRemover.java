@@ -8,6 +8,14 @@ import java.util.List;
 
 import rm.textprocessing.util.Language;
 
+/**
+ * A tool for removing a set of stop words from a String
+ * Stop words can either be added from a file, from a string array or from a predefined list 
+ * selected according to a Language.
+ * The following files must exists and contain a stop word list for their corresponding language :  
+ *  - lexicon/stopwords/fr.txt
+ *  - lexicon/stopwords/en.txt
+ */
 public class StopWordsRemover extends PatternRemover 
 {
 	private String[] stop_words;
@@ -84,7 +92,7 @@ public class StopWordsRemover extends PatternRemover
 	
 	/**
 	 * Set the stop_word array from a file
-	 * @param file
+	 * @param file The file from which the stopwords must be loaded
 	 */
 	private void set_sw_from_file(String file) throws IOException
 	{

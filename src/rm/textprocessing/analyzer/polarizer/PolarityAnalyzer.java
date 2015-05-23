@@ -13,19 +13,20 @@ import java.util.HashMap;
  * - > 0 : positive
  *
  * An unknown word is considered neutral
- * The neutrality of a term is determine by the static member THRESHOLD_NEUTRAL.
+ * The neutrality of a term is determine by the static member THRESHOLD_NEUTRAL :
+ * a word is neutral if |polarity| < THRESHOLD_NEUTRAL, not neutral otherwise 
  */
 abstract public class PolarityAnalyzer<P> extends HashMap<String, P>
 {
 	private static final long serialVersionUID = 5521509468518089521L;
 
 	/** Extreme scores */
-	public static float NEUTRAL_SCORE = 0.0f;
-	public static float NEGATIVE_SCORE = -1.0f;
-	public static float POSITIVE_SCORE = 1.0f;
+	public static final float NEUTRAL_SCORE = 0.0f;
+	public static final float NEGATIVE_SCORE = -1.0f;
+	public static final float POSITIVE_SCORE = 1.0f;
 	
 	/** Thresholds */
-	public static float THRESHOLD_NEUTRAL = 0.01f;
+	public static float THRESHOLD_NEUTRAL = 0.01f; 
 	
 	public PolarityAnalyzer()
 	{
@@ -68,7 +69,7 @@ abstract public class PolarityAnalyzer<P> extends HashMap<String, P>
 	}
 	
 	/**
-	 * Compute the polarity class for the given polarity
+	 * Compute the polarity class for the given polarity value
 	 * @param polarity A polarity value in [-1,1]
 	 * @return The corresponding polarity class
 	 */
@@ -81,7 +82,7 @@ abstract public class PolarityAnalyzer<P> extends HashMap<String, P>
 	}
 	
 	/**
-	 * Computet the average polarity of a text
+	 * Compute the average polarity of a text
 	 * @param text The text (a set of words separated by whitespaces)
 	 * @return The average polarity of the text (in [-1, 1])
 	 * @note The words that are not in the lexicon are ignored

@@ -9,7 +9,6 @@ import org.jsoup.select.Elements;
 import rm.textprocessing.analyzer.polarizer.PolarityAnalyzer;
 import rm.textprocessing.analyzer.polarizer.Polarity;
 
-
 /**
  * A crawler for running through the set of amazon review pages of a given product
  * @author Romain Mormont
@@ -33,6 +32,10 @@ public class AmazonCrawler
 		this.processor = new AmazonProcessor(AmazonProcessingStrategy.PREPROCESS, corpus);
 	}
 	
+	/**
+	 * Launch the crawler from the start url
+	 * During the crawling, an amazon review corpus is built
+	 */
 	public void launch()
 	{
 		String url = start_page_url;
@@ -108,6 +111,13 @@ public class AmazonCrawler
 		return corpus;
 	}
 	
+	/**
+	 * Main function lauching the amazon review crawler
+	 * Parameters :
+	 *  1) the name of the product
+	 *  2) the url of the product reviews' first page
+	 *  3) the file in which the corpus must be saved
+	 */
 	public static void main(String[] args)
 	{
 		if(args.length != 3)
@@ -130,7 +140,7 @@ public class AmazonCrawler
 			System.err.println("Cannot save file : " + e.getMessage());
 		}
 		
-		
+		// print summary
 		float polarity = 0;
 		float stars = 0;
 		int pos_count = 0, neu_count = 0, neg_count = 0;
@@ -139,7 +149,6 @@ public class AmazonCrawler
 		{	
 			polarity += review.get_polarity();
 			stars += review.get_stars();
-			
 			
 			switch(PolarityAnalyzer.get_polarity_class(review.get_polarity()))
 			{

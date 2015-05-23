@@ -4,7 +4,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * A class for removing parts of a TextDocument based on a regex pattern
+ * A class for removing parts of a String based on a regex pattern
  * @author Romain Mormont
  */
 public class PatternRemover extends TextProcessingTool

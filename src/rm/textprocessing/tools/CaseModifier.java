@@ -3,7 +3,7 @@ package rm.textprocessing.tools;
 import rm.textprocessing.util.Case;
 
 /**
- * A processing tool for modifying the case of a string
+ * A processing tool for modifying the case of the characters of a String
  * @author Romain Mormont
  */
 public class CaseModifier extends TextProcessingTool 

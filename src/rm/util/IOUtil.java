@@ -9,8 +9,15 @@ import java.io.OutputStreamWriter;
 import java.io.Writer;
 import java.util.Vector;
 
+/**
+ * A class containing useful methods for performing file io 
+ */
 public class IOUtil 
 {
+	/**
+	 * Print the string in the file
+	 * All exceptions are catched, print a error message if an error occurs
+	 */
 	public static void print_str(String file, String str)
 	{
 		Writer writer = null;
@@ -35,6 +42,10 @@ public class IOUtil
 		}
 	}
 	
+	/**
+	 * Read the lines contained in a file and return them in an String array
+	 * All exceptions are catched, print an error message if an error occurs
+	 */
 	public static String[] read_file_lines(String file)
 	{
 		BufferedReader reader = null;
