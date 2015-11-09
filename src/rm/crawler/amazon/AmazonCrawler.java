@@ -23,7 +23,6 @@ public class AmazonCrawler
 	/**
 	 * Build an amazon crawler starting on the given product's review page referenced by the given url.
 	 * @param start_url
-	 * @param product_name
 	 */
 	public AmazonCrawler(String start_url)
 	{
@@ -93,6 +92,7 @@ public class AmazonCrawler
 		
 		if(items.size() == 0) 
 			return "";
+
 		
 		String url = items.first().attr("href");
 		
