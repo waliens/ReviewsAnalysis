@@ -1,6 +1,6 @@
 package rm.textprocessing.tools;
 
-import java.util.Vector;
+import java.util.ArrayList;
 
 /**
  * A processing tool that applies to a document or a corpus a set of other processing tools
@@ -8,11 +8,11 @@ import java.util.Vector;
  */
 public class Pipeline extends TextProcessingTool 
 {
-	Vector<TextProcessingTool> process_chain;
+	ArrayList<TextProcessingTool> process_chain;
 	
 	public Pipeline()
 	{
-		process_chain = new Vector<TextProcessingTool>();
+		process_chain = new ArrayList<>();
 	}
 	
 	@Override

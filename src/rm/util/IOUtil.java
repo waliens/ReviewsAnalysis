@@ -7,7 +7,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
-import java.util.Vector;
+import java.util.ArrayList;
 
 /**
  * A class containing useful methods for performing file io 
@@ -50,7 +50,7 @@ public class IOUtil
 	{
 		BufferedReader reader = null;
 		
-		Vector<String> vec = new Vector<String>();
+		ArrayList<String> vec = new ArrayList<String>();
 		
 		try 
 		{
@@ -72,7 +72,7 @@ public class IOUtil
 		}
 		
 		String[] array = new String[vec.size()]; 
-		vec.copyInto(array);
+		vec.toArray(array);
 		return array;
 	}
 }

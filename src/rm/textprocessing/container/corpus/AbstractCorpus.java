@@ -1,7 +1,7 @@
 package rm.textprocessing.container.corpus;
 
 import java.io.IOException;
-import java.util.Vector;
+import java.util.ArrayList;
 
 import rm.util.IOUtil;
 import rm.util.TSVRowSerializable;
@@ -14,7 +14,7 @@ import rm.util.TSVSerializable;
  * @param <D> The document type.
  */
 abstract public class AbstractCorpus<D extends TSVRowSerializable> 
-	extends Vector<D> 
+	extends ArrayList<D>
 	implements TSVSerializable
 {
 	private static final long serialVersionUID = 4728367663071157209L;
